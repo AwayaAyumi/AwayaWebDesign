@@ -1,0 +1,66 @@
+//reset
+
+html {
+  font-size: 62.5%;
+}
+body,h1,h2,h3,h4,h5,h6,p,
+ul,li,img,a {
+  margin: 0;
+  padding: 0;
+  vertical-align:baseline;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-weight: normal;
+}
+img {
+  max-width: 100%;
+  display: inline-block;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+a {
+  color: #0388A6;
+  text-decoration: none;
+  display: inline-block;
+}
+button {
+  border: none;
+}
+
+::selection
+{
+    background: #F2BD1D;
+    color: #FAFAFA;
+}
+::-moz-selection
+{
+    background: #F2BD1D;
+    color: #FAFAFA;
+}
+
+
+//color
+$sitelogo : #0A0A0A;
+$font-base : #333333;
+$heading-color: #011C26;
+$sub-heading-color: #024059;
+$font-white: #FAFAFA;
+$button: #011C26;
+$point-color: #F2BD1D;
+$link-color: #0388A6;
+
+//
+
+.wow {
+   visibility: hidden;
+}
+

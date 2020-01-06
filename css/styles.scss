@@ -1,0 +1,322 @@
+@charset "utf-8";
+
+@import "scss/_base",
+        "scss/_foundation";
+
+
+
+//header 
+
+.header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    width: 100vw;
+    height: 8rem;
+    padding: 0 4rem;
+    z-index: 10;
+}
+.navbar-toggle {
+    display: inline-block;
+    width: 3.6rem;
+    cursor: pointer;
+    z-index: 150;
+    transition: all .5s;
+    .nav-button {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: $font-base;
+        transition: all .2s;
+        &:nth-child(2),
+        &:nth-child(3) {
+          margin-top: 1rem;  
+        }
+    }
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+// nav
+
+.toggle-nav {
+    position: absolute;
+    top: -2000px;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+    padding-top: 12rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    text-align: center;
+    font-family: 'Work Sans', 'Arial Black', serif;
+    font-weight: 800;
+    z-index: 100;
+}
+.nav-head {
+    font-size: 1.8rem;
+    color: $sub-heading-color;
+    a:visited {
+        color: $sub-heading-color;
+    }
+}
+.nav-menu {
+    font-size: 3.2rem;
+    color: $link-color;
+    list-style-type: none;
+    li {
+        transition: all .2s;
+        &:hover {
+            color: $point-color;
+        }
+    }
+    a:visited {
+        color: $link-color;
+    }
+}
+.nav-bottom {
+    font-size: 1.4rem;
+}
+.close-button {
+    .nav-button {
+        &:nth-child(2) {
+            visibility: hidden;
+        }
+        &:first-child {
+            transform: rotate(35deg);
+            transform-origin: top left;
+            width: 4.2rem;
+        }
+        &:nth-child(3) {
+            transform: rotate(-35deg);
+            transform-origin: top left;
+            width: 4.1rem;
+        }
+    }
+}
+
+
+// main
+.main {
+    width: 100vw;
+    padding-top: 5rem;
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: 45vh;
+        background: url(../image/main.jpg) no-repeat top / cover;
+        z-index: -100;
+    }
+}
+.main-wrapper {
+    position: relative;
+    padding-top: 18rem;
+}
+.f-site-logo {
+    display: inline-block;
+    position: relative;
+    left: 0;
+    text-align: center;
+}
+.main-service-link {
+    position: absolute;
+    top: 28rem;
+    right: 1rem;
+}
+.profile-sns {
+    display: flex;
+    align-items: center;
+}
+.profile-sns-item {
+    margin-right: 1rem;
+    list-style-type: none;
+    transition: all .3s;
+    &:hover {
+        opacity: .7;
+    }
+}
+.profile-awayaimage {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.profile-content {
+    width: 70%;
+    margin-top: 8rem;
+}
+
+// service
+.service-item {
+    display: flex;
+    justify-content: space-between;
+}
+.service-item-description {
+    width: 55%;
+    margin-right: 1.6rem;
+}
+.service-img {
+    width: 40%;
+    height: 100%;
+}
+.service-flow {
+    position: relative;
+    max-width: 996px;
+    margin: 0 auto;
+    h3 {
+        margin-left: 5rem;
+    }
+}
+.service-flow-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.service-flow-item {
+    width: 30%;
+    text-align: center;
+}
+
+
+// skills
+.skills-wrapper {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.skills-item {
+    width: 20%;
+    text-align: center;
+}
+
+// works
+.slider-area {
+    width: 100vw;
+}
+.slide-slide {
+    width: 100%;
+}
+.works-description-item {
+    width: 40%;
+    height: auto;
+    margin : 0 auto;
+    padding-top: 4rem;
+    width: 100%;
+    list-style-type: none;
+}
+
+// contact
+.form-wrapper {
+    width: 50rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.form-line {
+    display: block;
+    text-align: left;
+}
+.form-item {
+    width: 50rem;
+    height: 4rem;
+    padding: 4px 8px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid $font-base;
+    border-radius: 0;
+    color: inherit;
+    font-family: inherit;
+    font-size: 1em;
+    transition: all .3s;
+    &:hover, &:focus {
+        border: 2px solid $point-color;
+        box-shadow: none;
+        outline: none;
+    }
+}
+.form-textarea {
+    width: 50rem;
+    height: 22rem;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid $font-base;
+    border-radius: 0;
+    color: inherit;
+    font-family: inherit;
+    font-size: 1em;
+    padding: 4px 8px;
+    transition: all .3s;
+    &:hover, &:focus {
+        border: 2px solid $point-color;
+        box-shadow: none;
+        outline: none;
+    }
+}
+.mustlabel {
+    display: inline-block;
+    width: 3rem;
+    height: 1.5rem;
+    margin: 0 1rem 1rem;
+    background-color: #FF3B3B;
+    color: $font-white;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 3px;
+}
+
+// footer 
+.footer {
+    width: 100vw;
+    height: 29rem;
+    background: url(../image/footer.jpg) no-repeat bottom / cover;
+}
+.footer-text {
+    padding-top: 10rem;
+    font-size: 6rem;
+    font-family: 'Work Sans', 'Arial Black', serif;
+    font-weight: 800;
+    line-height: 8rem;
+    letter-spacing: 2px;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: $sitelogo;
+}
+
+// to-top
+.to-top {
+    position: fixed;
+    right: 4rem;
+    bottom: 4rem;
+    opacity: 0;
+    cursor: pointer;
+    transition : all 500ms;
+    animation: toTop 3s linear 0s infinite normal;
+    @keyframes toTop {
+    0% {transform: translateY(3px);}
+    50% {transform: translateY(10px);}
+    100% {transform: translateY(3px);}
+    }
+    &:hover {
+    opacity: 1;
+    transform: scale(2);
+    }
+}
+.effect-scroll { 
+    opacity: .8;
+}
+
+
+
+@import    "scss/_responsive";
